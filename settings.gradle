@@ -1,0 +1,14 @@
+pluginManagement {
+    repositories {
+        maven {
+            credentials{
+                username "$nexusUser"
+                password "$nexusPassword"
+            }
+            url "http://localhost:8081/repository/plugins-gradle-proxy/"
+            allowInsecureProtocol true
+        }
+    }
+}
+
+rootProject.name = 'jenkins-nexus-demo'
