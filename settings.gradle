@@ -5,7 +5,7 @@ pluginManagement {
                 username "jenkinsuser"
                 password "passw0rd"
             }
-            url "http://localhost:8081/repository/plugins-gradle-proxy/"
+            url "http://192.168.0.13:8081/repository/plugins-gradle-proxy/"
             allowInsecureProtocol true
         }
     }
