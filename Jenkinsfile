@@ -4,7 +4,7 @@ pipeline {
     stage('checkout, build') {
       steps {
         sh '''withCredentials([usernamePassword(
-credentialsId: \'nexus\',
+credentialsId: \'nexus-credentials\',
 usernameVariable: \'nexusUser\',
 passwordVariable: \'nexusPassword\'
 )]) {
