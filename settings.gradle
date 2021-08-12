@@ -3,7 +3,7 @@ pluginManagement {
         maven {
             credentials{
                 username "$nexusUser"
-                password "$nexusPassword"
+                password "passw0rd"
             }
             url "http://localhost:8081/repository/plugins-gradle-proxy/"
             allowInsecureProtocol true
