@@ -17,8 +17,8 @@ configurations {
 repositories {
 	maven {
 		credentials {
-			username "$nexusUser"
-			password "$nexusPassword"
+			username "jenkinsuser"
+			password "passw0rd"
 		}
 		url "http://localhost:8081/repository/maven-central/"
 		allowInsecureProtocol true
