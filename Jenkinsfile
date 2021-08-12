@@ -3,10 +3,12 @@ pipeline {
   stages {
     stage('checkout, build') {
       steps {
-        withCredentials([usernamePassword(credentialsId: 'nexus-credentials', usernameVariable: 'nexusUser',passwordVariable: 'nexusPassword')]) {
-         sh './gradlew clean build'
+        withCredentials(bindings: [usernamePassword(credentialsId: 'nexus-credentials', usernameVariable: 'nexusUser',passwordVariable: 'nexusPassword')]) {
+          sh 'echo $nexusUser $nexusPassword'
         }
+
       }
     }
+
   }
 }
