@@ -5,7 +5,7 @@ pipeline {
       steps {
         withCredentials(bindings: [usernamePassword(credentialsId: 'nexus-credentials', usernameVariable: 'nexusUser',passwordVariable: 'nexusPassword')]) {
           sh '''echo $nexusUser $nexusPassword
-./gradlew clean build'''
+./gradlew clean build -PnexusUser=$nexusUser -PnexusPassword=$nexusPassword'''
         }
 
       }
